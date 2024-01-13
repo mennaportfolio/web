@@ -302,15 +302,7 @@ width: 400px;
 	background-color: #062d4e;
 }
 .about_img img {
-	box-shadow: 7px 1px 61px -23px #000000;
-	width: 400px;
-	height: 400px;
-	display: flex;
-	align-items: center;
-	justify-content: left;
-	-webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-	clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-	object-fit: cover;
+		width: 330px;
 }
 .about .about-element-1 {
     position: absolute;

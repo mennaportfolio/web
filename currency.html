@@ -11,6 +11,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Sevillana&display=swap" rel="stylesheet">
+<style>
+    .card h3 {
+	color: #000;
+	font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+    </style>
 </head>
 
 <body>
@@ -38,7 +44,7 @@
 
     <!-- Currency Converter -->
 
-    <section class="currency_converter pt-100 position-relative">
+    <section class="currency_converter position-relative">
         <div class="straight_heading">
             <h1>Currency  Converter</h1>
         </div>
@@ -198,10 +204,17 @@
                 </div>
             </div>
 
-
+<div class="row text-center">
+    <div class="col-12">
+      <div class="card">
+        <h3 id="time" class="time"></h3>
+        <h3 id="date" class="date"></h3>
+      </div>
+    </div>
+  </div>
         </div>
     </section>
-    <footer>
+   <footer>
         <div class="container">
             <div class="row">
                 <div class="col-12 foot-wrap">
@@ -228,6 +241,37 @@
 
     </script>
     <script src="js/curency.js"></script>
+        <!--time dand date-->
+    <script>
+        var today = new Date();
+var day = today.getDate();
+var month = today.getMonth() + 1;
+
+function appendZero(value) {
+    return "0" + value;
+}
+
+function theTime() {
+    var d = new Date();
+    document.getElementById("time").innerHTML = d.toLocaleTimeString("en-US");
+}
+
+if (day < 10) {
+    day = appendZero(day);
+}
+
+if (month < 10) {
+    month = appendZero(month);
+}
+
+today = day + "/" + month + "/" + today.getFullYear();
+
+document.getElementById("date").innerHTML = today;
+
+var myVar = setInterval(function () {
+    theTime();
+}, 1000);
+    </script>
 </body>
 
 </html>
